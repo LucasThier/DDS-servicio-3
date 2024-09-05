@@ -7,7 +7,6 @@ const port = 3000;
 
 app.use(bodyParser.json());
 
-
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -23,7 +22,6 @@ db.connect((err) => {
     }
     console.log('Conectado a MySQL');
 });
-
 
 app.get('/localidades', (req, res) => {
     const query = `
